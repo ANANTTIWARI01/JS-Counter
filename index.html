@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>incre_decre_reset_addnumber</title>
+</head>
+<body>
+
+    <h1 id="head">0</h1>
+    <button  onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+    <button onclick="resetvalue()">Reset</button>
+    <button onclick="addnumber()">
+        add
+    </button>
+    <input type="number" onclick="clearscreen()" >
+
+
+
+<script>
+    let value = document.getElementById('head');
+    let inputs = document.querySelector('input')
+    function increment(){
+        if(value.innerHTML>19){
+            alert('it is done');
+        }
+        else{
+            value.innerHTML++;
+            // console.log(value.innerHTML);
+        }
+        
+    }
+    function decrement(){
+        if(value.innerHTML<=0){
+            alert('it is not acceptable');
+        }
+        else{
+            value.innerHTML--;
+        }
+        
+    }
+    function resetvalue(){
+        value.innerHTML =0;  
+    }
+     
+    function addnumber(){
+       let answer = Number(value.innerHTML)+ Number(inputs.value)
+    //    console.log(answer)
+       value.innerHTML = answer ;
+    }
+
+    function clearscreen(){
+        
+    }
+</script>
+
+</body>
+</html>
